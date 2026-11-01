@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121f26">
+  <title>Manga Reader</title>
+  <link rel="stylesheet" href="Css/manga.css">
+  <link rel="stylesheet" href="Css/reader.css">
+</head>
+<body class="reader-body">
+  <header class="reader-header">
+    <a class="reader-brand" href="home.html">
+      <img src="Assets/logo.png" alt="Mirai Manga" width="128" height="38">
+    </a>
+    <a class="reader-back" href="home.html">Back to manga</a>
+  </header>
+
+  <main class="reader-main">
+    <section class="reader-toolbar" aria-labelledby="reader-title">
+      <div>
+        <p class="reader-eyebrow">MANGADX READER</p>
+        <h1 id="reader-title">Loading chapter…</h1>
+        <p id="reader-meta" class="reader-meta" aria-live="polite"></p>
+      </div>
+      <label class="chapter-picker-label" for="chapter-picker">Chapter list</label>
+      <select id="chapter-picker" disabled aria-label="Choose a chapter">
+        <option>Loading chapters…</option>
+      </select>
+    </section>
+
+    <nav class="chapter-navigation" aria-label="Chapter navigation">
+      <button id="newer-chapter" type="button" disabled>Newer chapter</button>
+      <a id="open-mangadex" href="https://mangadex.org" target="_blank" rel="noopener noreferrer">
+        Open on MangaDex
+      </a>
+      <button id="older-chapter" type="button" disabled>Older chapter</button>
+    </nav>
+
+    <p id="reader-status" class="reader-status" role="status">Loading chapter from MangaDex…</p>
+    <div id="reader-pages" class="reader-pages"></div>
+    <p class="reader-credit">
+      Manga and chapter data provided by
+      <a href="https://mangadex.org" target="_blank" rel="noopener noreferrer">MangaDex</a>.
+      Please support the credited creators and scanlation group.
+    </p>
+  </main>
+
+  <script src="javascript/reader.js" defer></script>
+</body>
+</html>

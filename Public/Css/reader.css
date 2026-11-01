@@ -1,0 +1,238 @@
+.reader-body {
+  min-height: 100vh;
+}
+
+.reader-header {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px max(20px, calc((100% - 1120px) / 2));
+  border-bottom: 1px solid rgb(255 255 255 / 9%);
+  background: #101a20;
+}
+
+.reader-brand img {
+  display: block;
+  width: 128px;
+  height: auto;
+}
+
+.reader-back,
+.chapter-navigation a {
+  color: #b7c5cf;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.reader-back:hover,
+.chapter-navigation a:hover {
+  color: #4ed9ff;
+}
+
+.reader-main {
+  width: min(1000px, calc(100% - 32px));
+  margin: 30px auto 60px;
+}
+
+.reader-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 250px);
+  gap: 20px;
+  align-items: end;
+}
+
+.reader-eyebrow {
+  margin: 0 0 8px;
+  color: #4ed9ff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.reader-toolbar h1 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+.reader-meta {
+  margin: 10px 0 0;
+  color: #a9bac5;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.reader-meta a {
+  color: #4ed9ff;
+}
+
+.chapter-picker-label {
+  display: grid;
+  gap: 8px;
+  color: #a9bac5;
+  font-size: 0.8rem;
+}
+
+.chapter-picker-label select,
+#chapter-picker {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 7px;
+  color: #f4f4f5;
+  background: #1b2a33;
+  font: inherit;
+}
+
+#chapter-picker option {
+  color: #f4f4f5;
+  background: #1b2a33;
+}
+
+.chapter-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 22px 0;
+  padding: 12px 0;
+  border-top: 1px solid rgb(255 255 255 / 8%);
+  border-bottom: 1px solid rgb(255 255 255 / 8%);
+}
+
+.chapter-navigation button {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 7px;
+  color: #f4f4f5;
+  background: #1b2a33;
+  font: inherit;
+  cursor: pointer;
+}
+
+.chapter-navigation button:hover:not(:disabled) {
+  border-color: #4ed9ff;
+}
+
+.chapter-navigation button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.reader-status {
+  margin: 28px auto;
+  color: #a9bac5;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.reader-status:empty {
+  display: none;
+}
+
+.reader-status a {
+  color: #4ed9ff;
+}
+
+.reader-pages {
+  overflow: hidden;
+  min-height: 1px;
+  border-radius: 5px;
+  background: #0b111e;
+}
+
+.reader-page {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 80px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.reader-credit {
+  margin: 24px auto 0;
+  color: #8d9da7;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.reader-credit a {
+  color: #4ed9ff;
+}
+
+@media (max-width: 600px) {
+  .reader-header {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .reader-main {
+    width: calc(100% - 20px);
+    margin-top: 20px;
+  }
+
+  .reader-toolbar {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .chapter-navigation {
+    gap: 6px;
+  }
+
+  .chapter-navigation button,
+  .chapter-navigation a {
+    padding: 0 8px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .reader-header {
+    min-height: 56px;
+    gap: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .reader-brand img {
+    width: clamp(76px, 30vw, 110px);
+  }
+
+  .reader-back {
+    font-size: 0.8rem;
+    text-align: right;
+  }
+
+  .reader-main {
+    width: calc(100% - 12px);
+    margin-top: 16px;
+  }
+
+  .reader-toolbar h1 {
+    font-size: 1.25rem;
+    overflow-wrap: anywhere;
+  }
+
+  .chapter-navigation {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .chapter-navigation button,
+  .chapter-navigation a {
+    min-width: 0;
+    min-height: 38px;
+    padding: 5px 3px;
+    font-size: 0.68rem;
+    line-height: 1.25;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+}
